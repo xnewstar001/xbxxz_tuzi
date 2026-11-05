@@ -1,0 +1,20 @@
+[login]
+pingtaileixing = 0
+server_id = 0
+username = 0
+password = 0
+phonenum = 0
+accountid = 0
+access_token = 0
+; ===== offline login (bypass dead author server, see docs/07) =====
+; token = full channel login query string (capture from phone game login, one per account x server)
+;   e.g. appid=...&openid=...&timestamp=...&platform=...&server_id=22&access_token=...&sign=...
+; priority: token_{server_id} > token > access_token (legacy key)
+; gateway = pre-login server ip:port; REQUIRED when token channel is not in this assist's
+;   22-channel table (e.g. lenovo -> 193.112.212.244:15409)
+; NOTE: keep this file ASCII-only (the pyd reads it with GBK codec at import time)
+; UI channel/server selection is free; diagnostics in log/local_auth.log
+; auth_days = local license days (default 3650, shown as remaining time, feeds feature gate)
+; token =
+; gateway =
+; auth_days = 3650

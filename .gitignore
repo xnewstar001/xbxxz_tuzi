@@ -1,0 +1,28 @@
+# ===== 用户本地配置与运行日志（含 token，绝不入库）=====
+run/config.ini
+run/log/
+run/*.log
+run/*.bin
+run/probe_log.json
+run/endpoint_capture.log
+
+# ===== 一次性实验探针（含本地抓包样本/账号数据，结论已固化在 docs/06，不入库）=====
+tools/probe_stage[2-9].py
+tools/probe_stage1[0-9].py
+tools/probe_stage2[0-9].py
+tools/probe_stage3[0-7].py
+tools/patch_game_pyd.py
+
+# ===== 源码编译产物（py2 compileall 的 .pyc；run/ 内运行所需的 .pyc 正常入库）=====
+src/*.pyc
+tools/*.pyc
+__pycache__/
+
+# ===== 本地工作产物 =====
+*.log
+.zwork/
+
+# ===== RSA 私钥（可选入库；本仓库只带公钥 pub_spki.b64，私钥可 make_rsa_key.py 重生成）=====
+tools/keys/mykey_priv.pem
+tools/keys/mykey.json
+*.pem
